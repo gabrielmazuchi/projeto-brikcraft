@@ -1,0 +1,201 @@
+:root {
+  --cinza-fundo: #f7f7f7;
+  --cinza-texto: #c6c6c6;
+  --vermelho: #ee2211;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  background: var(--cinza-fundo);
+  display: grid;
+  justify-items: center;
+  gap: 3.75rem;
+  margin-top: 3.75rem;
+}
+
+.header {
+  display: grid;
+  justify-items: center;
+  gap: 60px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.foto {
+}
+
+.menu {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 1rem 2rem;
+  margin: 1px;
+  border: #ffffff solid 2px;
+}
+
+.menu a:hover {
+  border: var(--vermelho) solid 2px;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.introducao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+}
+
+.introducao h1 {
+  font-size: 2rem;
+}
+
+.descricao {
+  text-align: right;
+  padding: 2.5rem;
+  background: #ffffff;
+  gap: 1.25rem;
+  display: grid;
+  align-content: center;
+  justify-items: end;
+  position: relative;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.descricao::before {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #e21;
+  position: absolute;
+  top: 30px;
+  right: -30px;
+}
+
+.botao {
+  text-decoration: none;
+  background: var(--vermelho);
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background-color: #900;
+}
+
+.subtitulo {
+  font-size: 64px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.2);
+  text-align: right;
+  padding: 40px;
+  align-self: center;
+  word-break: break-word;
+  background-image: url(/img/onda.svg);
+}
+
+.beneficios {
+  background: #ffffff;
+  padding: 2.5rem;
+}
+
+.beneficios-itens {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px 20px;
+  margin: 0px;
+  padding: 20px;
+  border-left: 4px solid transparent;
+}
+
+.beneficios p {
+  grid-column: 2;
+}
+
+.beneficios-itens:nth-child(odd) {
+  background: var(--cinza-fundo);
+}
+
+.beneficios-itens:hover {
+  border: var(--vermelho);
+}
+
+.rodape {
+  background: #ffffff;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 40px;
+  border-left: 4px solid transparent;
+}
+
+@media (max-width: 1000px) {
+  .introducao-vantagens {
+    grid-template-columns: 1fr;
+  }
+  .subtitulo {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    gap: 30px;
+    margin-top: 20px;
+  }
+  .header {
+    gap: 30px;
+  }
+  .introducao {
+    grid-template-columns: 1fr;
+  }
+  .descricao {
+    text-align: left;
+    justify-items: start;
+  }
+  .descricao::before {
+    display: none;
+  }
+  .subtitulo {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .subtitulo {
+    font-size: 2rem;
+  }
+}
